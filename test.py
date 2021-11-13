@@ -14,5 +14,8 @@ class TestAlarmException(unittest.TestCase):
 class Person(unittest.TestCase):
      def TestCheckPost(self):
          self.assertEqual(person.checkPos(3,60),-1)
+         self.assertEqual(person.checkPos(40,60),-1)
+         self.assertEqual(person.checkPos(3,1),-1)
+         self.assertEqual(person.checkPos(3,80),-1)
 if __name__ == '__main__':
     unittest.main()
