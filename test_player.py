@@ -27,6 +27,9 @@ class TestPlayer(unittest.TestCase):
     def test_playerInit(self):
         self.assertEqual(Player.playerInit(self), None)
 
+    def test_updateLife(self):
+        self.assertEqual(Player.updateLife(self), None)
+
         
 if __name__ == '__main__':
     unittest.main()
