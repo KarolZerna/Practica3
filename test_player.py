@@ -1,5 +1,5 @@
 import unittest
-from person import * 
+# from person import * 
 from board import *
 from player import Player
 
@@ -9,14 +9,22 @@ class TestPlayer(unittest.TestCase):
         self.playerPos = [1,1]
         self.score = 0
         self.lives = 3
-        self.x = 19
-        self.y = 5
+        self.x = 3 #19
+        self.y = 1 #5
+        self.update = 3
+    
+    def test_drawPlayer(self):
+        self.assertEqual(Player.drawPlayer(self, self.x, self.y), None)
 
     def test_checkPos_pos(self):
         self.assertEqual(Player.checkPos(self, self.x, self.y), 1)
 
-    def test_checkPos_neg(self):
-        self.assertIsNot(Player.checkPos(self, self.x, self.y), -1)
+    # def test_checkPos_neg(self):
+    #     self.assertEqual(Player.checkPos(self, self.x, self.y), -1)
+
+    def test_checkEnemy(self):
+        self.assertEqual(Player.checkEnemy(self, self.x, self.y), 1)
+
 
         
 if __name__ == '__main__':
