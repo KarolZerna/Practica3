@@ -30,6 +30,9 @@ class TestPlayer(unittest.TestCase):
     def test_updateLife(self):
         self.assertEqual(Player.updateLife(self), None)
 
+    def test_updateScore(self):
+        self.assertEqual(Player.updateScore(self,4),None)
+
         
 if __name__ == '__main__':
     unittest.main()
