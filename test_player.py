@@ -30,6 +30,18 @@ class TestPlayer(unittest.TestCase):
     def test_updateScore(self):
         self.assertEqual(Player.updateScore(self,4),None)
 
+    def test_moveUp(self):
+        self.assertEqual(Player.moveUp(self),None)
+
+    def test_moveDown(self):
+        self.assertEqual(Player.moveDown(self),None)
+
+    def test_moveLeft(self):
+        self.assertEqual(Player.moveLeft(self),None)
+
+    def test_moveRight(self):
+        self.assertEqual(Player.moveRight(self),None)
+
         
 if __name__ == '__main__':
     unittest.main()
