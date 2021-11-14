@@ -18,9 +18,6 @@ class TestPlayer(unittest.TestCase):
     def test_checkPos_pos(self):
         self.assertEqual(Player.checkPos(self, self.x, self.y), 1)
 
-    # def test_checkPos_neg(self):
-    #     self.assertEqual(Player.checkPos(self, self.x, self.y), -1)
-
     def test_checkEnemy(self):
         self.assertEqual(Player.checkEnemy(self, self.x, self.y), 1)
 
