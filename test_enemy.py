@@ -18,6 +18,13 @@ class TestEnemy(unittest.TestCase):
     def test_enNum(self):
         self.assertEqual(Enemy.enNum(self),5)
 
+    def test_enemy_init(self):
+        self.assertEqual(Enemy.enemyInit(self),None)
+
+    def test_update_pos(self):
+        self.assertEqual(Enemy.updatePos(self),None)
+
+
 
 if __name__ == '__main__':
     unittest.main()

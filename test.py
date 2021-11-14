@@ -1,16 +1,20 @@
+import time
+import tty 
+
 import unittest
 from unittest.case import expectedFailure
-import time
-from gameplay import Gameplay
 from unittest import mock
+
+from gameplay import Gameplay
 from board import Board
 from bomb import Bomb
 from enemy import Enemy
 from player import Player
 from alarmexception import AlarmException
 from person import Person
-from board import *
-from player import Player
+from brick import Brick
+from getchunix import GetchUnix
+
 
 class TestAlarmException(unittest.TestCase):
      def test_alarmexceptio(self):
@@ -82,6 +86,11 @@ class TestEnemy(unittest.TestCase):
         self.assertEqual(Enemy.killPlayer(self,4,1),None)
     def test_enNum(self):
         self.assertEqual(Enemy.enNum(self),5)
+    def test_update_pos(self):
+        self.assertEqual(Enemy.updatePos(self),None)
+    def test_enemy_init(self):
+        self.assertEqual(Enemy.enemyInit(self),None)
+
 
 
 class TestGamePlay(unittest.TestCase):
@@ -148,7 +157,20 @@ class TestPlayer(unittest.TestCase):
 
     def test_updateScore(self):
         self.assertEqual(Player.updateScore(self,4),None)
-       
+
+
+class TestBrick(unittest.TestCase):
+    def test_brickInit(self):
+        self.assertEqual(Brick.brickInit(self),None)
+    
+    def test_drawBricks(self):
+        self.assertEqual(Brick.drawBricks(self),None)
+
+
+class TestGetchUnix(unittest.TestCase):
+
+     def test_init(self):
+        self.assertTrue(self, tty)
 
 if __name__ == '__main__':
     unittest.main()
