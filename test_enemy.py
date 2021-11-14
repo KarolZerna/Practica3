@@ -12,8 +12,8 @@ class TestEnemy(unittest.TestCase):
     
     def test_killPlayer(self):
         self.assertEqual(Enemy.killPlayer(self,4,1),None)
-
-
+    def test_enNum(self):
+        self.assertEqual(Enemy.enNum(self),5)
 
 
 if __name__ == '__main__':
