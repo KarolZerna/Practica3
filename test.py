@@ -17,7 +17,7 @@ from getchunix import GetchUnix
 
 
 class TestAlarmException(unittest.TestCase):
-     def test_alarmexceptio(self):
+     def test_alarmexception(self):
         self.assertRaises(Exception)
 
 
@@ -166,11 +166,6 @@ class TestBrick(unittest.TestCase):
     def test_drawBricks(self):
         self.assertEqual(Brick.drawBricks(self),None)
 
-
-class TestGetchUnix(unittest.TestCase):
-
-     def test_init(self):
-        self.assertTrue(self, 0)
 
 if __name__ == '__main__':
     unittest.main()
