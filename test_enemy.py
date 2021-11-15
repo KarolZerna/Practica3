@@ -3,6 +3,7 @@ from enemy import Enemy
 
 
 class TestEnemy(unittest.TestCase):
+
     def test_draw_enemy(self):
         self.assertEqual(Enemy.drawEnemy(self),None)
 
@@ -11,18 +12,21 @@ class TestEnemy(unittest.TestCase):
         
     def test_checkPos(self):
         self.assertEqual(Enemy.checkPos(self,4,3),1)
+
+    def test_checkPos_conditional(self):
+        self.assertTrue(Enemy.checkPos(self,0,0),-1)
     
     def test_killPlayer(self):
         self.assertEqual(Enemy.killPlayer(self,4,1),None)
-        
+
     def test_enNum(self):
         self.assertEqual(Enemy.enNum(self),5)
 
-    def test_enemy_init(self):
-        self.assertEqual(Enemy.enemyInit(self),None)
+#    def test_enemy_init(self):
+#        self.assertIsInstance(Enemy.enemyInit(self),None)
 
-    def test_update_pos(self):
-        self.assertEqual(Enemy.updatePos(self),None)
+#   def test_update_pos(self):
+#      self.assertEqual(Enemy.updatePos(self),None)
 
 
 
