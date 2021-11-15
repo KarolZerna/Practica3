@@ -49,6 +49,9 @@ class TestBomb(unittest.TestCase):
     def test_drawBomb_not_bimbo(self):
         self.assertFalse(Bomb.drawBomb(self.bimbo))
 
+    def test_drawBomb_in_range(self):
+        self.assertIn(Bomb.drawBomb(self.y), self.gameArray[0][0])
+
     def test_drawBomb_pos1(self):
         self.assertEqual(Bomb.drawBomb(self.bomPos[2]>1), None)
 
@@ -68,7 +71,7 @@ class TestBomb(unittest.TestCase):
         self.assertEqual(Bomb.afterExplosion(self, self.x, self.y), None)
 
     def test_explosion(self):
-        self.assertEqual(Bomb.explosion(self), None)
+        self.assertIsNone(Bomb.explosion(self), None)
 
     def test_explosion_after(self):
         self.assertEqual(Bomb.afterExplosion(self, self.x, self.y), None)
@@ -96,7 +99,8 @@ class TestEnemy(unittest.TestCase):
         self.assertEqual(Enemy.updatePos(self),None)
     def test_enemy_init(self):
         self.assertEqual(Enemy.enemyInit(self),None)
-
+    def test_checkPos_conditional(self):
+        self.assertTrue(Enemy.checkPos(self,0,0),-1)
 
 
 class TestGamePlay(unittest.TestCase):
