@@ -8,30 +8,41 @@
 
 Para ejecutar el programa se debe usar:
 
-``` python3 bomberman.py ```
+    $ python3 bomberman.py
+
+Para ejecutar la cobertura de las pruebas se debe usar:
+
+    $ coverage run test.py
+
+Para visualizar la cobertura de las pruebas se debe usar:
+
+    $ coverage html
+
+
+### Sobre el juego
 
 ##### Controles :
 
-  Acciones    Tecla
-
-* Izquierda 	   a 
-* Derecha   	   d 
-* Arriba    	   w 
-* Abajo     	   s 
-* Lanzar bomba 	 b
-* Salir		       q 
-
+| Acciones  | Tecla |
+| ------------- | ------------- |
+| Izquierda  | a  |
+| Derecha  | d  |
+| Arriba  | w  |
+| Abajo  | s  |
+| Lanzar bomba  | b  |
+| Salir  | q  |
 
 ##### Equivalencias:
 
-'/' Ladrillos
-'B' Bomberman 
-'E' Enemigo
-'e' Explosión de fuego
-'X' Muros
+| Símbolos  | Equivalencias |
+| ------------- | ------------- |
+| '/'  | Ladrillos  |
+| 'B'  | Bomberman  |
+| 'E'  | Enemigo  |
+| 'e'  | Explosión de fuego  |
+| 'X'  | Muros  |
 
-
-##### Functionalidad:
+##### Funcionalidad:
 
 * El jugador es controlado por el usuario y los enemigos se mueven aleatoriamente en el tablero, pero no pueden atravesar paredes o ladrillos.
 * Bomberman puede lanzar una bomba que destruye ladrillos y enemigos a su alrededor después de 3 segundos. Al matar a un enemigo, el usuario obtiene 100 puntos y al romper ladrillos, el usuario obtiene 20 puntos.
@@ -39,4 +50,4 @@ Para ejecutar el programa se debe usar:
 * El usuario gana el juego al pasar todos los niveles.
 
 
-#### By: Syed Mohd Ali Rizwi
+#### Desarrollado por: Syed Mohd Ali Rizwi
